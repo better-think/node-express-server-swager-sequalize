@@ -11,7 +11,7 @@ const Company = require('./controllers/company.controller');
 // controllers end
 module.exports = (app) => {
   app.get("/", function(req, res) {
-      return res.sendFile(__dirname + "/front_end/index.html")
+      return res.sendFile(__dirname + "/your front-end/index.html")
   })
   app.post('/signup', Authentication.signup)
   app.post('/api/v1/auth/sign-in', requireSignin,  Authentication.signin)

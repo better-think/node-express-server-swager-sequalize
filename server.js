@@ -12,8 +12,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors({ origin: '*' }))
 app.use(morgan('combined'))
-app.use(express.static('front_end'));
-app.use('/front_end', express.static('front_end'));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 router(app)

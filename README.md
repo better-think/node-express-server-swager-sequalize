@@ -1,4 +1,5 @@
 # auth-nodejs-mysql README
+Node server with swagger
 
 ## Setup
 

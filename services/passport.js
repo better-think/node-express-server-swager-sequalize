@@ -24,7 +24,6 @@ const jwtOptions = {
 }
 
 const jwtLogin = new JwtStrategy(jwtOptions, (payload, done) => {
-  console.log("JwtStrategy1234567890-")
   User.findOne({where: {email: payload.sub}})
     .then(user => user ? done(null, user) : done(null, false))
     .catch(e => done(err, false))
